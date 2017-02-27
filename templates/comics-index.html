@@ -1,1 +1,34 @@
-{{cic}}
+<label>Search by title
+<input ng-model="title">
+</label>
+<hr>
+
+<div ng-repeat="comics in cic.comics[0] | filter:title">
+
+	<div class="thumbnail">
+
+		<a href="{{comics.urls[0].url}}"><h2>{{comics.title}}</h2></a>
+	 	<p>{{comics.description}}</p>
+	 	
+	</div>
+</div>
+
+<div ng-repeat="comics in cic.comics[1] | filter:title">
+
+	<div class="thumbnail">
+
+		<a href="{{comics.urls[0].url}}"><h2>{{comics.title}}</h2></a>
+	 	<p>{{comics.description}}</p>
+	 	
+	</div>
+</div>
+
+<div ng-repeat="comics in cic.comics[2] | filter:title">
+
+	<div class="thumbnail">
+
+		<a href="{{comics.urls[0].url}}"><h2>{{comics.title}}</h2></a>
+	 	<p>{{comics.description}}</p>
+	 	
+	</div>
+</div>
